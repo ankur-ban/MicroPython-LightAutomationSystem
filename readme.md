@@ -21,29 +21,3 @@ The components should be wired to the following GPIO pins on your board:
 | Light 3 | `Pin 16` | Output |
 
 *(Note: Ensure the grounds of your components are tied back to the common GND on your microcontroller).*
-
-## The Code
-
-Here is the core logic that drives the automation loop:
-
-```python
-# light automation system
-from machine import Pin
-from time import sleep
-
-led1 = Pin(2, Pin.OUT)
-led2 = Pin(4, Pin.OUT)
-led3 = Pin(16, Pin.OUT)
-
-while True:
-    led1.on()
-    sleep(1)
-    led1.off()
-    
-    led2.on()
-    sleep(1)
-    led2.off()
-    
-    led3.on()
-    sleep(1)
-    led3.off()
